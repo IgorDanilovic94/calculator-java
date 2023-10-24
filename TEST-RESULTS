@@ -1,0 +1,7 @@
+@Test
+public void testAdditionOperation() {
+    String expression = "4+5";
+    String expected = "9"; // Očekivani rezultat za sabiranje 4 i 5
+    String result = Calculator.Run(expression);
+    assertEquals(expected, result);
+}
