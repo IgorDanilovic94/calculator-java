@@ -1,1 +1,22 @@
+@Test
+public void testAdditionOperation() {
+    String expression = "4+5";
+    String expected = "9"; // Očekivani rezultat za zbrajanje 4 i 5
+    String result = Calculator.Run(expression);
+    assertEquals(expected, result);
+}
 
+- unit test prolazi bez ikakvih problema
+
+- prilikom black box testiranja sam primijetio da ako drugi sabirak/djelilac/cinilac/umanjilac 
+napisati kao negativan broj, izbacuje nam gresku
+Npr:
+-3-3 = 6
+-3+(-3)
+*ERROR(ne prepoznaje operaciju)
+
+-mozda bi korektnije bilo dijeljenje sa brojem 0 da izbaci poruku 'nije moguce obaviti operaciju'
+Ali je i 'Infinity' prihvatljivo
+
+-takodje, ako nije izvodljivo da se decimalni brojevi zapisuju sa zarezom bilo bi pozeljno bar
+prije unosenja podataka napisati neku napomenu da mora ici tacka
